@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{german}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{wrapfig}
+\usepackage[a4paper, left=3cm, right=3cm]{geometry}
+\usepackage{subcaption}
+%\usepackage{hyperref}
+
+\title{Fachpraktikum MCI (01513) - WS 2021/22}
+\author{Gruppe 2\\
+	Catherine Camier, Sabine Hopf, Gino Rißland, Bastian Winzen}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	\newpage
+	\setcounter{page}{1}
+	\tableofcontents
+	\newpage
+	
+	\listoffigures
+	\addcontentsline{toc}{section}{\protect\numberline{}Abbildungsverzeichnis}
+	
+	\listoftables
+	\addcontentsline{toc}{section}{\protect\numberline{}Tabellenverzeichnis}
+	\newpage
+	
+	
+	\section{Softwarerahmen}
+Im Kapitel Softwarerahmen wird eine Architektur- und Schnittstellenbeschreibung vorgenommen. Entscheidungen für oder gegen bestimmte Architekturmuster und die finale Auswahl werden begründet. Darüber hinaus werden die Vor- und Nachteile der gewählten (und ggf. verworfenen) Strukturen diskutiert. Das entworfene  Generatorenprinzip und die Benutzerschnittstelle werden hier erläutert. Des Weiteren werden exemplarische Beispiele für die kooperativ generierten Ausgaben zur Verfügung gestellt. Zuletzt wird auch eine Anleitung zur Reproduktion der Ergebnisse beschrieben.
+		\subsection{Architektur und Schnittstellenbeschreibung}
+			\subfile{section/architectur}
+		\subsection{Generatorenprinzip}\label{generatorenprinzip}
+			\subfile{generators/generators}
+		\subsection{Beschreibung der Kooperation}
+			\subfile{kooperation/kooperation}
+			\clearpage
+		\subsection{Beschreibung der Benutzerschnittstelle}
+			\subfile{gui/gui}		
+		\subsection{Anleitung zur Reproduktion der Ergebnisse}
+		\subfile{reproduktion/reproduktion}
+		\clearpage
+	\section{Generatoren}
+Alle Generatoren sind gemäß des in Kapitel \ref{generatorenprinzip} vorgestellten Generatorenprinzips entstanden und können sowohl unabhängig voneinander als auch in räumlicher bzw. zeitlicher Kooperation Kunst erzeugen.
+		\subsection{Generatoren von Catherine Camier}
+			% \input{./ccamier/ccamier.tex}
+			\subfile{ccamier/ccamier}
+			\clearpage
+		\subsection{Generatoren von Sabine Hopf}
+			% \input{./shopf/shopf.tex}
+			\subfile{shopf/shopf}
+			\clearpage
+		\subsection{Generatoren von Gino Rißland}
+			\subfile{gino/new_Ausarbeitung_mit_Gino}
+			\clearpage
+		\subsection{Generatoren von Bastian Winzen}
+			% \input{./bwinzen/bwinzen.tex}
+			\subfile{bwinzen/bwinzen}
+		
+	\section{Zusammenfassung}
+	\subfile{zusammenfassung/zusammenfassung}
+
+\clearpage
+\bibliographystyle{babplain}
+\bibliography{mciLiteratur}
+\addcontentsline{toc}{section}{\protect\numberline{}Literatur}
+\end{document}
+

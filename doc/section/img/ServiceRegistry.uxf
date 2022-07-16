@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>80</y>
+      <w>470</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>ServiceRegistry
+--
+-serviceRegistry: Map&lt;Class&lt;?&gt;, Map&lt;String, ServiceFactory&lt;?&gt; &gt; &gt;
+--
++register(serviceFactory:ServiceFactory&lt;?&gt;): void
++getServiceFactories(clazz:Class&lt;T&gt;):Collection&lt;ServiceFactory&lt;T&gt;&gt;
++getServiceFactory(clazz:Class&lt;T&gt;, id:String):ServiceFactory&lt;T&gt;
+
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>280</y>
+      <w>330</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ServiceFactory&lt;T&gt;
+--
+
+--
+/+createService(parameter:Map&lt;String, Object&gt;):T/
+/+getServiceDescription():ServiceDescription/
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>490</y>
+      <w>370</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>ServiceDescription
+--
+-serviceInterface:Class&lt;T&gt;
+-id:String
+-label:String
+-description:String
+-parameterDescriptions:List&lt;ParameterDescription&gt;
+--
++getServiceInterface():Class&lt;T&gt; 
++getId():String
++getLabel():String
++getDescription():String
++getParameterDescriptions():List&lt;ParameterDescription&gt;
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>1060</w>
+      <h>790</h>
+    </coordinates>
+    <panel_attributes>de.fernunihagen.mci.group2.coopalgoart.api
+--
+bg=orange
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>60</x>
+      <y>200</y>
+      <w>1020</w>
+      <h>610</h>
+    </coordinates>
+    <panel_attributes>.services
+--
+bg=orange
+layer=2
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>280</y>
+      <w>330</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ParameterDescription
+--
+-id:String
+-label:String
+-description:String
+-parameterDescriptions:List&lt;ParameterDescription&gt;
+-type:ParameterType
+-parameterRange:Object
+--
+
+layer=6
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>490</x>
+      <y>240</y>
+      <w>560</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>.desc
+--
+bg=orange
+layer=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>470</y>
+      <w>370</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+ParameterType
+--
+BOOLEAN, INT, FLOAT, STRING, ENUM, HIERACHY
+OPTION, COLOR, FILE, DIRECTORY, RADIO, TOGGLE
+--
+layer=6
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>630</y>
+      <w>200</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>IntRange
+--
+-defaultValue:long
+-min:long
+-max:long
+-increment:long
+--
+layer=7
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>510</x>
+      <y>600</y>
+      <w>460</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>.ranges
+--
+bg=orange
+layer=6
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>630</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>ColorRange
+--
+-defaultColor:int
+--
+layer=7
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>180</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=10</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>360</y>
+      <w>180</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=10</panel_attributes>
+    <additional_attributes>10.0;130.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>300</y>
+      <w>100</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=10</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>390</y>
+      <w>50</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=10</panel_attributes>
+    <additional_attributes>30.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>750</x>
+      <y>700</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Beispiele
+bg=blue
+layer=10
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>370</y>
+      <w>40</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+layer=10</panel_attributes>
+    <additional_attributes>20.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

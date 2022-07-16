@@ -1,0 +1,87 @@
+{
+  "name" : "Coop2",
+  "renderer" : "FX2D",
+  "backgroundColor" : -16777216,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "SPLIT_SCREEN_2X2",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 50,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 15,
+      "yStartpoint" : 0
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 3,
+      "startRotation" : 0.0,
+      "startX" : 150,
+      "startY" : 500,
+      "treeColor" : 5079117,
+      "treeShape" : "geneigt, größere Zweige",
+      "zweigFarbe" : 16777037
+    },
+    "yoffset" : 0,
+    "xoffset" : 500
+  }, {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : true,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : 16711680,
+      "boidsForm" : "CIRCLE",
+      "cohesion" : 0.5,
+      "colorMode" : "STATIC",
+      "colorTransition" : false,
+      "coopColorMode" : "WEAK",
+      "coopMode" : "COORDINATE_ATTRACTION",
+      "countOfBoids" : 10000,
+      "edgeBehavior" : "ENDLESS_SCREEN",
+      "fading" : 0,
+      "forceNoColorTanks" : true,
+      "maxForce" : 1.0,
+      "maxSpeed" : 13.275720164609053,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 1.0,
+      "size" : 8.975308641975309,
+      "solidSize" : true,
+      "staticSpeed" : true
+    },
+    "yoffset" : 500,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "ccamier_gol",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbe1" : 13056,
+      "farbe2" : 255,
+      "verhaeltnis" : 30
+    },
+    "yoffset" : 500,
+    "xoffset" : 500
+  } ]
+}

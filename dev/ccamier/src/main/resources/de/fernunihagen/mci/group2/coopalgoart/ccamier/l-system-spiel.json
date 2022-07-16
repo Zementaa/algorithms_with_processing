@@ -1,0 +1,79 @@
+{
+  "name" : "L-System-Spiel",
+  "renderer" : "JAVA2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "1",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 5,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 16777164,
+      "ruleset" : "default",
+      "x" : 505,
+      "y" : 504
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "colorMode" : "GAUSS",
+      "coopMode" : "COORDINATE_AVOIDANCE",
+      "iteration" : 2,
+      "iterationdelay" : 10,
+      "lsystem" : "Kochkurve",
+      "reverseMode" : false,
+      "rotation" : false,
+      "size" : 0.1,
+      "solidSize" : true,
+      "strokeColor" : 16764134,
+      "strokeWeight" : 1,
+      "treeCount" : 15
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "startRotation" : 0.43669442665527475,
+      "startX" : 206,
+      "startY" : 208,
+      "treeColor" : 11790054,
+      "treeShape" : "gerade, symmetrisch"
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 13434828,
+      "ruleset" : "Sierpinksi",
+      "x" : 801,
+      "y" : 797
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

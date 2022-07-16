@@ -1,0 +1,48 @@
+{
+  "name" : "BWinzen::3DImageEvolution",
+  "renderer" : "P3D",
+  "backgroundColor" : 3349120,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "3",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 500,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_evolution3d",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "color" : 16744576,
+      "colorMode" : "GAUSS",
+      "coopMode" : "COORDINATE_ATTRACTION",
+      "coopModeTarget" : "ONLY_BY_SEED",
+      "count" : 45527.777777777774,
+      "elementForm" : "CIRCLE",
+      "elementSpeed" : 42.221810699588474,
+      "imagePath" : "pics/araber.jpg",
+      "mode" : "grayscale",
+      "perlinoiseItStep" : 0.01,
+      "shoterEvolution" : true,
+      "size" : 1.0555555555555556,
+      "solidSize" : true
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "contextTest",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "contextX" : 1,
+      "contextY" : 1
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

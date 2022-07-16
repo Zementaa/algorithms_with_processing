@@ -1,0 +1,27 @@
+{
+  "name" : "Wasserfarben",
+  "renderer" : "FX2D",
+  "backgroundColor" : 16777215,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_psystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "filePath1" : "pics/watercolor.png",
+      "filePath2" : "pics/watercolor.png",
+      "filePath3" : "pics/watercolor2.png",
+      "filePath4" : "pics/watercolor2.png"
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

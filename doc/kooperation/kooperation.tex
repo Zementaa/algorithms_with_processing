@@ -1,0 +1,38 @@
+\documentclass[../mciAusarbeitung.tex]{subfiles}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{german}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+
+\title{Fachpraktikum MCI (01513) - WS 2021/22}
+\author{Gruppe 2\\
+	Sabine Hopf}
+\date{\today}
+
+\begin{document}
+	Um die Kooperation der Generatoren zu ermöglichen, haben wir uns als Gruppe auf die Implementation eines durch andere Generatoren, bzw. deren Parameter manipulierbaren Seeds geeinigt. Dieser beeinflusst die pseudozufälligen Random Werte im gesamten Programm. Somit erhielten wir gleich die Lösung für zwei Probleme: 
+	\begin{itemize}
+		\item die Bilder/Kunstwerke sollen deterministisch reproduzierbar sein
+		\item die Generatoren sollen sich gegenseitig beeinflussen
+	\end{itemize}
+	Ein Seed ist ein Variablenwert, mit dem die Berechnung, in unserem Fall die Berechnung der Random Werte, begonnen wird. Er kann zunächst auch vom Benutzer in der GUI als Anfangswert gesetzt werden. Als Default-Wert ist der Seed auf 0 gesetzt.\\
+	Der Seed für den ersten Generator ist 0, bzw. der, durch den Benutzer gesetzte Wert. Die Parameter des ersten Generators erweitern, bzw. ändern dann den Seed für den nächsten Generator, diese Parameter dann wieder für den nächsten Generator usw.\\ 
+	In der Klasse \textit{GeneratorConfiguration} werden mit der Methode \textit{parameterToSeed()} die Hashwerte der gesammelten Parameterdaten errechnet und zu einem Wert aggregiert. In der Methode \textit{createGenerators(List<GeneratorConfiguration> generatorConfigs,
+	CooperationContext defaultContext)} der Klasse \textit{ArtGallery} wird der neue Seed im \textit{CooperationContext} durch Addition des alten Seeds mit dem neu übergebenen Wert gesetzt.\\
+	Um diesen Wert zu nutzen, können die Generatoren eine neue Instanz der Random Klasse mit dem Seed initialisieren. Der Zugriff auf den Seed erfolgt über den \textit{CooperationContext}.\\
+	Die Random Werte wurden in den Generatoren vielfältig eingesetzt, z. B. verändern sie in Zellautomaten die Startbedingungen, bei Bäumen die Winkelgröße oder die Länge der Zweige, bei Schwärmen die Farbe, Richtung, Geschwindigkeit oder Startposition etc.\\
+	Um noch eine andere Option der Kooperation einzurichten, hat jeder Generator die Möglichkeit einen Punkt als Kooperationspunkt weiterzugeben. Dieser Punkt kann neu berechnet werden, oder aus vorhergehenden Parametern bestehen.\\
+	Wenn der Generator das Interface \textit{PixelCoordinateCalculationStrategy} implementiert, kann er mit der Methode \textit{calculate(CooperationContext cooperationContext)} eine neue \textit{PixelCoordinate} setzen. Diese wird wie im Abschnitt 1.1.3 beschrieben in der Methode \textit{showArt()} im \textit{Artist} gesetzt.\\
+	Der Generator kann seinerseits durch die Methode \textit{getCoordinate()} im \textit{CooperationContext} diesen \textit{PixelCoordinate} Punkt zur Beeinflussung verschiedener Punkte im Algorithmus nutzen.\\
+	Auch hier gibt es wieder mannigfache Möglichkeiten die Koordinate zur Kooperation einzusetzen. So kann z. B. das Hindernis des einen Schwarm durch das Bild laufen, weil es von dem anderen Schwarm als ,,Räuber'' der die anderen Boids jagt, benutzt wird.\\
+	Eine weitere Art der Kooperation wird durch das erzeugte Bild selbst geliefert. Das Bild der vorherigen Iteration kann aus dem \textit{CooperationContext} entnommen werden. Damit können Generatoren auf die Farbwerte bestimmter Pixel reagieren und zum Beispiel ihren Wert übernehmen.
+	
+	
+\end{document}

@@ -1,0 +1,27 @@
+{
+  "name" : "Veraestelung",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "1",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 5,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 16711935,
+      "ruleset" : "Veraestelung",
+      "x" : 300,
+      "y" : 300
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

@@ -1,0 +1,94 @@
+{
+  "name" : "SHopf::LSystem;SHopf::LSystem;SHopf::LSystem;SHopf::LSystem;SHopf::LSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 8,
+  "generatorConfigs" : [ {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 96,
+      "startY" : 1000,
+      "treeColor" : 13434879,
+      "treeShape" : "gerade, kleine Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 306,
+      "startY" : 893,
+      "treeColor" : 10060006,
+      "treeShape" : "geneigt, grÃ¶ÃŸere Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 448,
+      "startY" : 600,
+      "treeColor" : 16764006,
+      "treeShape" : "gerade, wenig Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 613,
+      "startY" : 720,
+      "treeColor" : 16322028,
+      "treeShape" : "gerade, symmetrisch"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 697,
+      "startY" : 1000,
+      "treeColor" : 16777113,
+      "treeShape" : "geneigt, kleine Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

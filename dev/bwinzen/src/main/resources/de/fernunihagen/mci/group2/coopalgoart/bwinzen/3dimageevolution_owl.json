@@ -1,0 +1,36 @@
+{
+  "name" : "Owl",
+  "renderer" : "P3D",
+  "backgroundColor" : 3349120,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "3",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 1000,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_evolution3d",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "color" : 16744576,
+      "colorMode" : "RANDOM_GRAY",
+      "coopMode" : "ONLY_BY_SEED",
+      "coopModeTarget" : "ONLY_BY_SEED",
+      "count" : 29288.88888888889,
+      "elementForm" : "LINE",
+      "elementSpeed" : 3.0,
+      "imagePath" : "pics/owl.jpg",
+      "mode" : "grayscale",
+      "perlinoiseItStep" : 0.01,
+      "shoterEvolution" : false,
+      "size" : 1.0555555555555558,
+      "solidSize" : true
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

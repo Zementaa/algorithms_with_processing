@@ -1,0 +1,62 @@
+{
+  "name" : "SHopf::LSystem;SHopf::Swarm;SHopf::LSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : 13428479,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 50,
+  "generatorConfigs" : [ {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 3,
+      "startRotation" : 0.0,
+      "startX" : 699,
+      "startY" : 1000,
+      "treeColor" : 3368499,
+      "treeShape" : "gerade, kleine Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "boidsShape" : "Dreieck",
+      "countBoids" : 1000,
+      "obstacle" : false,
+      "obstacleDefense" : 25,
+      "quadTree" : false,
+      "separateView" : 25
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 5,
+      "startRotation" : 0.0,
+      "startX" : 500,
+      "startY" : 1000,
+      "treeColor" : 6723993,
+      "treeShape" : "geneigt, kleine Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

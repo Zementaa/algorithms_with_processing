@@ -1,0 +1,65 @@
+{
+  "name" : "GRissland::perlinNoise;BWinzen::LSystem;CCamier::LSystem",
+  "renderer" : "P2D",
+  "backgroundColor" : 11119017,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_PerlineNoise",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "fly" : 0.0,
+      "increaseFly" : -0.05,
+      "scl" : 20,
+      "strokeValue" : 255,
+      "xOff" : 0.4730452674897119,
+      "yOff" : 0.3475308641975309
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "colorMode" : "GAUSS",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 7,
+      "iterationdelay" : 0,
+      "lsystem" : "Kochkurve",
+      "reverseMode" : false,
+      "rotation" : true,
+      "size" : 1.0,
+      "solidSize" : true,
+      "strokeColor" : 16777062,
+      "strokeWeight" : 4,
+      "treeCount" : 5
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "farbeZweige" : 0,
+      "ruleset" : "Sierpinksi",
+      "x" : 479,
+      "y" : 405
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+  "name" : "SHopf::LSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : 14541501,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 8,
+  "generatorConfigs" : [ {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.47188532941135364,
+      "startX" : 510,
+      "startY" : 901,
+      "treeColor" : 9938740,
+      "treeShape" : "geneigt, kleine Zweige"
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

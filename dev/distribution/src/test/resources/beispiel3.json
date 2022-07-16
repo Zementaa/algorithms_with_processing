@@ -1,0 +1,81 @@
+{
+  "name" : "6174285d-de51-46e0-8f4e-06c1cd748f18",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 1715,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : 0,
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1715,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : 13402163,
+      "boidsForm" : "lines",
+      "cohesion" : 2.5317460317460316,
+      "colorMode" : "GAUSS",
+      "coopColorMode" : false,
+      "coopMode" : "ONLY_BY_SEED",
+      "countOfBoids" : 10000.0,
+      "maxForce" : 1.0,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 1.0,
+      "solidSize" : true
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1715,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "colorMode" : "GAUSS",
+      "coopMode" : "COORDINATE_AVOIDANCE",
+      "iteration" : 10.523809523809524,
+      "iterationdelay" : 10,
+      "lsystem" : "Spiralen",
+      "reverseMode" : true,
+      "rotation" : true,
+      "size" : 2.6142857142857143,
+      "solidSize" : false,
+      "strokeColor" : 1717145,
+      "strokeWeight" : 3.444444444444444,
+      "treeCount" : 15.0
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1715,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "colorMode" : "STATIC",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 4.2857142857142865,
+      "iterationdelay" : 10,
+      "lsystem" : "Coding Train Beispiel",
+      "reverseMode" : false,
+      "rotation" : false,
+      "size" : 1.6285714285714288,
+      "solidSize" : true,
+      "strokeColor" : 8401741,
+      "strokeWeight" : 2,
+      "treeCount" : 5
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

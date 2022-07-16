@@ -1,0 +1,38 @@
+{
+  "name" : "da198786-935d-42d4-b46b-b273d43c2ff8",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 514,
+  "height" : 514,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 50,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_Flocking",
+    "generatorVersion" : 0,
+    "width" : 514,
+    "height" : 514,
+    "clearScreen" : false,
+    "parameter" : {
+      "closestDistance" : 100000,
+      "countFlocks" : 200
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 514,
+    "height" : 514,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 15,
+      "yStartpoint" : 0
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

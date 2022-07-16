@@ -1,0 +1,17 @@
+siehe Kapitel 1.5 Anleitung zur Reproduktion der Ergebnisse
+
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Evolution/EvoDefault''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Evolution/EvoDefaultEnd''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Evolution/EvoEcke''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Evolution/EvoWenig''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/L-System/TreeBeispiel''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/L-System/TreeBeispielRichtung''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/L-System/TreeKopf''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/L-System/TreeRichtung''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/L-System/TreeKombi''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Schwarm/SchwarmKurven''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Schwarm/SchwarmQuad''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Schwarm/SchwarmKunst''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Kooperation/Dschungel''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Kooperation/Feuerwerk''
+Bildgenerierung:,,Menübar/Beispiele/SHopf/Kooperation/Unterwasserwelt''

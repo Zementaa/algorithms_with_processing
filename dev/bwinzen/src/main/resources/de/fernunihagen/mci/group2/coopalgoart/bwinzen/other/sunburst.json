@@ -1,0 +1,68 @@
+{
+  "name" : "BWinzen::Swarm;Helper::Farbreservoirs",
+  "renderer" : "FX2D",
+  "backgroundColor" : -16777077,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "alignment" : 4.0,
+      "boidsColor" : 16711680,
+      "boidsForm" : "TRIANGLE",
+      "cohesion" : 0.0,
+      "colorMode" : "GAUSS",
+      "colorTransition" : true,
+      "coopColorMode" : "BRIGHT",
+      "coopMode" : "COORDINATE_ATTRACTION",
+      "countOfBoids" : 20000,
+      "edgeBehavior" : "TELEPORTATION",
+      "fading" : 0,
+      "forceNoColorTanks" : true,
+      "maxForce" : 10.0,
+      "maxSpeed" : 22.164609053497944,
+      "radiusAlignment" : 48.559670781893004,
+      "radiusCohesion" : 45.061728395061735,
+      "radiusSeperation" : 48.559670781893004,
+      "seperation" : 4.0,
+      "size" : 4.0,
+      "solidSize" : true,
+      "staticSpeed" : false
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "colorTanks",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "coopColorMode" : "NO",
+      "count" : 36,
+      "size" : 50,
+      "speed" : 1
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "contextTest2",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : { },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

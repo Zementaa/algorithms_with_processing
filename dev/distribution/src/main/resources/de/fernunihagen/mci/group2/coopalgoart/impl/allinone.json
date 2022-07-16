@@ -1,0 +1,191 @@
+{
+  "name" : "Coop2",
+  "renderer" : "FX2D",
+  "backgroundColor" : -16777216,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "SPLIT_SCREEN_2X2",
+  "seed" : "1",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 104,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_lystembuilder",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : true,
+    "parameter" : {
+      "alpha" : 255,
+      "angle" : 120.0,
+      "axiom" : "F+G+G",
+      "colorMode" : "RANDOM_GRAY",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 6,
+      "iterationdelay" : 10,
+      "offsetX" : -135,
+      "offsetY" : 187,
+      "reverseMode" : false,
+      "rotation" : true,
+      "rule0" : "G=GG",
+      "rule1" : "F=F+G-F-G+F",
+      "rule2" : "",
+      "rule3" : "",
+      "rule4" : "",
+      "size" : 2.483333333333334,
+      "solidSize" : false,
+      "strokeColor" : 16777215,
+      "strokeWeight" : 3,
+      "treeCount" : 1
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : true,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : -1,
+      "boidsForm" : "TRIANGLE",
+      "cohesion" : 0.5,
+      "colorMode" : "GAUSS",
+      "colorTransition" : false,
+      "coopColorMode" : "NO",
+      "coopMode" : "ONLY_BY_SEED",
+      "countOfBoids" : 470,
+      "edgeBehavior" : "HIDDEN_FORCE",
+      "fading" : 0,
+      "forceNoColorTanks" : false,
+      "maxForce" : 1.0,
+      "maxSpeed" : 4.0,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 1.0,
+      "size" : 11.12962962962963,
+      "solidSize" : true,
+      "staticSpeed" : true
+    },
+    "xoffset" : 500,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "ccamier_gol",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : true,
+    "parameter" : {
+      "farbe1" : -13057,
+      "farbe2" : -3342337,
+      "verhaeltnis" : 10
+    },
+    "xoffset" : 0,
+    "yoffset" : 500
+  }, {
+    "generatorId" : "grissland_PerlineNoise",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "fly" : 0.0,
+      "increaseFly" : -0.05,
+      "scl" : 20,
+      "strokeValue" : 255,
+      "xOff" : 0.15,
+      "yOff" : 0.15
+    },
+    "xoffset" : 500,
+    "yoffset" : 500
+  }, {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : true,
+    "parameter" : {
+      "farbeZweige" : -1644979,
+      "ruleset" : "Fractal",
+      "x" : 258,
+      "y" : 253
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_swarm",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : true,
+    "parameter" : {
+      "boidsShape" : "Kurve",
+      "countBoids" : 150,
+      "obstacle" : false,
+      "obstacleDefense" : 20,
+      "quadTree" : false,
+      "separateView" : 25
+    },
+    "xoffset" : 500,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 20,
+      "yStartpoint" : 0
+    },
+    "xoffset" : 0,
+    "yoffset" : 500
+  }, {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsConnect" : true,
+      "cordsStartX" : 227,
+      "cordsStartY" : 240,
+      "hitPara" : 32,
+      "lifespan" : 116,
+      "numCords" : 247
+    },
+    "xoffset" : 500,
+    "yoffset" : 500
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.23917475600301483,
+      "startX" : 6,
+      "startY" : 497,
+      "treeColor" : 5079117,
+      "treeShape" : "geneigt, kleine Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "grissland_Flocking",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "closestDistance" : 398086,
+      "countFlocks" : 278
+    },
+    "xoffset" : 500,
+    "yoffset" : 0
+  } ]
+}

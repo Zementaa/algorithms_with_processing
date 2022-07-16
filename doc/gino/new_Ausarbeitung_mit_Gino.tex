@@ -1,0 +1,245 @@
+\documentclass[../mciAusarbeitung.tex]{subfiles}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{german}
+\usepackage{amssymb}
+\usepackage{subfiles}
+\usepackage{graphicx}
+
+\title{Fachpraktikum MCI (01513) - WS 2021/22}
+\author{Gruppe 2\\
+	Gino Rißland}
+\date{\today}
+
+
+
+
+\begin{document}
+	
+	
+	Dieser Bereich der Arbeit wird die von Gino Rißland implementierten Generatoren beschreiben. Dabei folgt für jeden Generator zunächst eine Beschreibung des Algorithmus, welche einen Überblick über die Funktionsweise geben soll. Anschließend folgt eine Darstellung einiger Ergebnisse, welche die Parametrisierung der einzelnen Generatoren und dessen Varianz beweisen soll. Zum Abschluss der jeweiligen Erläuterung, werden Stärken und Schwächen des Algorithmus dargestellt.
+		    \subsubsection{Zellulärer Automat}
+		    Dieser Abschnitt behandelt den zellulären Automaten und beschreibt diesen zunächst im Allgemeinen. Darüber hinaus wird auf die Implementierung von mir eingegangen und unterschiedliche Ergebnisse präsentiert. Zum Schluss des Abschnitts folgt eine Darstellung der Vorteile und Nachteile des zellulären Automaten.
+		    \paragraph{Beschreibung des Algorithmus}$~$ \\
+		    Der Algorithmus des Zellulären Automaten beschreibt ein Modell, welches aus wiederkommenden Anordnungen von Zellen, der Zellmenge Z, besteht [1]. Außerdem wird in [2] beschrieben, dass die einzelnen Zellen zu jedem Zeitpunkt immer einen Zustand aus einer endlichen Menge haben. Jene Menge wird mit S bezeichnet. Zudem wirken die einzelnen Zellen gegenseitig auf sich ein, sodass die Zellmenge in ständiger Interaktion steht. Dabei wird der Zustand einer Zelle in Abhängigkeit des eigenen, sowie des Zustands ihrer Nachbarzellen definiert.  Die Beziehung zu den Nachbarzellen wird durch eine Funktion 
+            V, welche eine Zelle auf einen n-elementigen Vektor abbildet, definiert. Fachlich werden die Nachbarschaftsbeziehungen in Moore-Nachbarschaft und in Von-Neumann-Nachbarschaft unterteilt [3].
+            
+            $~$ \\Die Moore-Nachbarschaft bezeichnet alle Zellen, welche mindestens eine Ecke mit der Basiszelle haben, als Nachbarn.\\
+            
+
+\begin{figure}[H]
+\centering
+            \includegraphics[width=0.5\linewidth]{"1..png"}
+
+\caption{Moore-Nachbarschaft}
+\end{figure}  
+  
+         
+            
+            $~$ \\Anders als die Moore-Nachbarschaft werden bei der Von-Neuman-Nachbarschaft nur die Zellen mit einer gemeinsamen Kante zur Basiszelle, als Nachbarn gezählt.\\
+            
+ \begin{figure}[H]
+\centering
+            \includegraphics[width=0.5\linewidth]{"2..png"}
+
+\caption{Von-Neuman-Nachbarschaft}
+\end{figure}            
+
+ 
+           $~$ \\Zusätzlich kann die Funktion 'V' verschieden definiert werden, wodurch unterschiedliche Beispiele im Rahmen der Umsetzung entstehen können. Zwei bekannte Beispiele werden nun vorgestellt:
+            
+            \begin{itemize}
+ \item 1.	Wolframs eindimensionales Universum
+            
+            Das Wolfram-Beispiel beinhaltet ein Modell, welche nur eine Raumdimension und eine Zeitdimension hat [3]. Dabei zeichnet der Algorithmus hier die Raumdimension waagerecht und die Zeitdimension senkrecht ein. Dieser einfache Algorithmus füllt einzelne Zellen entweder ganz oder gar nicht, wobei die Wahrscheinlichkeit bei 50 Prozent liegt. Zudem existiert bei diesem Algorithmus nur eine Regel, welche den Zustand der aktuellen Zelle abhängig von jeweils den beiden linken und rechten Nachbarzellen macht. Beispielweise sind zwei oder vier Nachbarzellen gefüllt, dann ist diese Zelle im nächsten Intervall ebenfalls gefüllt.
+ \item 2.	Cornways Spiel des Lebens
+            
+            Das Cornways Spiel des Lebens basiert auf einen zweidimensionalen Raum, welcher ein Spielfeld in Spalten und Zeilen darstellt. Jede Zelle kann in diesem Spielfeld jeweils zwei Zustände annehmen (lebendig oder tot). In der ersten Iteration werden einige lebendige Zellen auf dem Spielfeld gezeichnet. Dabei hat jede Zelle acht Nachbarzellen, welche jeweils auf den Zustand der aktuellen Zelle einwirken und den Zustand der nächsten Generation anhand von definierten Regeln bestimmen. Regeln können beliebig gewählt werden, beispielsweise können tote Zellen mit n-lebenden Nachbarn für die nächste Generation neu geboren (lebendig) werden.  Laut [3] gibt es vier Regeln, welche das Anfangsmuster bilden und beliebig ergänzt werden können.
+\end{itemize}
+            
+            \paragraph{Beschreibung der Implementierung Darstellung von Ergebnissen}$~$ \\
+            
+            $~$ \\Nun wird explizit auf die Implementierung meines Generators eingegangen und anschließend einige Ergebnisse präsentiert. 
+            Der implementierte Generator in meiner Arbeit, orientiert sich am Beispiel des Wolframs eindimensionalen Universums. In meiner Implementierung werden folgende Parameter für die Parametrisierung verwendet, welche dementsprechende Auswirkungen auf das Ergebnis haben:
+            \begin{itemize}
+            
+            \item Größe der Blocks:	bestimmt, in Abhängigkeit der Breite des Bildes, die Anzahl der Zellen in einer Zeile.
+            \item Y-Startpunkt:	definiert den Startpunkt der ersten Generation auf der Y-Achse des Bildes.
+            Dabei kann jede Zelle zwei Zustände annehmen, welcher entweder Leer oder gefüllt ist. 
+            \end{itemize}
+            Die Funktion v ist in dieser Implementierung durch folgende Regeln definiert: 
+            Hinweis: links = 1XX, rechts = XX1, Zentrum = X1X
+            
+            \begin{itemize}
+ \item 111: Nächste Generation ist leer.
+ \item 110: Nächste Generation ist leer.
+ \item 101: Nächste Generation ist leer.
+ \item 000: Nächste Generation ist leer.
+ \item 100: Nächste Generation ist gefüllt.
+ \item 011: Nächste Generation ist gefüllt
+ \item 101: Nächste Generation ist gefüllt
+  \item 001: Nächste Generation ist gefüllt
+\end{itemize}
+
+            $~$ \\Diese Regeln beeinflussen jeweils den Zustand der nächsten Generation von Zellen, diese dann gefüllt oder nicht gefüllt sind.  Zusätzlich werden die Zellen jeweils noch farbig umrahmt, sodass die Ästhetik des Bildes verbessert wird. Zudem implementiert der Generator eine Koorperation mithilfe eines Seeders, welcher abhängig vom vorherigen Generator ist. Dieser Seeder hat dann einen Einfluss auf die verwendeten Random-Werte und sorgt somit für eine Abhängigkeit zu anderen Generatoren.
+            In den folgenden Darstellungen werden drei verschiedene Ergebnisse des Generators gezeigt, welche durch die unterschiedliche Parametrisierung variieren. Dabei werden bei allen Ergebnissen die Default-Werte in der allgemeinen Konfiguration genommen.
+            
+Bildgenerierung:,,Menübar/Beispiele/GRissland/CAutomate/CAErgebnis1''\\
+  \begin{figure}[H]
+  \centering
+\includegraphics[width=0.5\linewidth]{"CA_default.png"}
+\caption[CA-Beispiel1]{1. Ergebnis (Größe der Block = 15; y-Startpunkt = 0)}
+  \end{figure}
+  Bildgenerierung:,,Menübar/Beispiele/GRissland/CAutomate/CAErgebnis2''\\
+  \begin{figure}[H]
+  \centering
+\includegraphics[width=0.5\linewidth]{"CA_size50.png"}
+\caption[CA-Beispiel2]{2. Ergebnis (Größe der Block = 50; y-Startpunkt = 0)}
+\centering
+\end{figure}
+Bildgenerierung:,,Menübar/Beispiele/GRissland/CAutomate/CAErgebnis3''\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"CA_y-point100.png"}
+\caption[CA-Beispiel3]{3. Ergebnis (Größe der Block = 15; y-Startpunkt = 100)}
+\end{figure}
+ 
+            
+            \paragraph{Bewertung des Algorithmus}$~$ \\
+            Dieser Abschnitt zeigt eine abschließende Bewertung des Algorithmus. Wobei die Bewertung des Algorithmus anhand von Vorteilen und Nachteilen erfolgt. 
+            Ein Vorteil des Algorithmus ist zum einen die Begrenzung der Zustände auf leer oder gefüllt und zum anderen die einfachen Regeln für die nächste Generation der Zellen. Dies hat zur Folge, dass der Algorithmus einfach zu implementieren ist. Zudem können trotz einfacher Struktur, komplexe Modelle abgebildet werden. Darüber hinaus wirken sich die einfachen Berechnungen positiv auf die Laufzeit aus, weshalb meine Implementierung eine gute Performance hat.
+            Allerdings können kompliziertere und eine wachsende Anzahl von Regeln einen negativen Einfluss auf die Laufzeit haben, was dann ein Nachteil wäre. Ebenso führt die geringe Anzahl der Zustände zu einer Beschränkung der abgebildeten Modelle. Beispielsweise wäre eine Darstellung von Modellen mit drei Zuständen nicht möglich.
+            Insgesamt kann der Algorithmus, welcher eine einfache Struktur hat und damit verbunden auch eine einfachen Implementierung mit sich bringt. Dennoch lassen sich mit diesem Algorithmus komplexe Modelle in einer vereinfachten Art und Weise darstellen, welches dann jedoch eine negative Auswirkung auf die Performance hat. 
+        
+        \subsubsection{Simulation Kollektive Intelligenz – Schwarmverhalten}
+        Dieser Abschnitt thematisiert die kollektive Intelligenz und beschreibt diese im Allgemeinen. Zudem wird auf die explizite Implementierung im Rahmen des Praktikums eingegangen, sowie verschiedene Ergebnisse meiner Implementierung abgebildet. Zum Abschluss des Abschnitts werden nochmals die Vorteile und Nachteile des Algorithmus vorgestellt.
+        
+            \paragraph{Beschreibung des Algorithmus}$~$ \\
+            Der Ansatz zur kollektiven Intelligenz wurde ursprünglich von der Natur abgeleitet [4]. Dabei wurden die Wege einer Ameise beobachtet und festgestellt, dass diese immer den kürzesten Weg von der Futterstelle zu ihrem Nest findet. Bei näheren Untersuchungen wurde herausgefunden, dass die Ameisen auf ihren Wegen Spuren ziehen. Diese Spuren markieren immer den kürzesten Weg und können nach erkunden Neuer Wege wieder genutzt werden. Die Schlussfolgerung dieser Erkenntnis ist, dass die Schwärme keine neuen Lösungen erzeugen, sondern nur die bisherigen Lösungen anpassen. Dieses Prinzip wurde dann in einen Algorithmus überführt, um dieses Naturphänomen zu Nutze zu machen.....
+            
+            \paragraph{Beschreibung der Implementierung und Darstellung von Ergebnissen}$~$ \\
+            Nachdem die Grundlagen des Algorithmus beschrieben wurden, wird hier auf die explizite Implementierung meines Generators eingegangen. Außerdem werden anschließend einige Ergebnisse mithilfe verschiedener Parametrisierung präsentiert.
+            Die Implementierung in meinen Generator wird das Schwarmverhalten ebenfalls simuliert. Hier ensteht der Schwarm aus einer Menge von Ellipsen, welche sich untereinander beeinflussen. Zudem wird bei meiner Implementierung explizit über den Rand hinaus gezeichnet.
+            
+            $~$ \\Außerdem ist dieser Generator abhängig von den vorherigen Generatoren, indem ein Seeder verwendet wird. Dieser Seeder wird von vorgeschalteten Generatoren übergeben und hat Einfluss auf die verwendeten Random-Werte. Anschließend wird der Seeder dann weitergeben, um Einfluss auf die nächsten Generatoren zu haben.
+            $~$ \\Darüber hinaus können unterschiedliche Parameter verändert werden, welche dann einen Einfluss auf das Ergebnis haben:
+            
+            \begin{itemize}
+ \item Anzahl:	Anzahl der Flocks
+ \item Entfernung:	Wert für die kleinste Distanz
+\end{itemize}
+            
+           $~$ \\Dabei wird die nächste Generation immer anhand von den nächsten Flocks berechnet.  Die genaue Bestimmung der nächsten Generation wird durch folgende Regeln definiert: 
+            
+\begin{itemize}
+ \item 1.	Der Winkel darf nicht 350° und der Winkel zum nächsten nicht 10° sein.
+ \item 2.	Drehe immer zum nächsten gelegenen Flock
+ \item 3.	Bewege dich in X= X + cos(heading)*speed und Y= Y + sin(heading)*speed
+ \item 4.	Gehe über die Ränder des Bildes hinüber
+\end{itemize}
+
+ $~$ \\Nun folgt die Darstellung von drei unterschiedlichen Ergbnissen, welche mithilfe unterschiedlicher Parametisierung erzeugt wurden. Dabei werden bei allen Ergebnissen die Default-Werte in der allgemeinen Konfiguration genommen, lediglich die Anzahl der Iterationen wurde auf 500 gesetzt.
+     
+Bildgenerierung:,,Menübar/Beispiele/GRissland/Flocking/FlockingErgebnis1''\\  
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"Flocking_default.png"}
+\caption[Flocking-Beispiel1]{1. Ergebnis (Anzahl = 200; Entfernung = 100000)}
+\end{figure}  
+Bildgenerierung:,,Menübar/Beispiele/GRissland/Flocking/FlockingErgebnis2''\\     
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"Flocking_anzahl500.png"}
+\caption[Flocking-Beispiel2]{2. Ergebnis (Anzahl = 500; Entfernung = 100000)}
+\end{figure} 
+Bildgenerierung:,,Menübar/Beispiele/GRissland/Flocking/FlockingErgebnis3''\\  
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"Flocking_entfernung1000000.png"}
+\caption[Flocking-Beispiel3]{3. Ergebnis (Anzahl = 200; Entfernung = 1000000)}
+\end{figure} 
+
+            \paragraph{Bewertung des Algorithmus}$~$ \\
+            Nun erfolgt eine abschließende Bewertung des Algorithmus. Dabei lässt sich sofort ein Vorteil aufweisen, welcher die effiziente Berechnungszeit und somit die Performance betrifft. Durch nicht ständiges neuberechnen des Schwarms, werden die Berechnungszeiten positiv beeinflusst. Zudem werden bei der Simulation des Schwarmverhaltens simple Regeln definiert, welche jedoch ein Komplexes Problem darstellen und dessen Lösung aufweisen können. 
+            Allerdings zeigt der Algorithmus auch ein Nachteil, durch das ständige Optimieren der bisherigen Lösungen auf. Der Algorithmus geht nämlich davon aus, dass es bereits eine Lösung gibt, welche dann auf ähnliche Probleme angepasst wird. Bei Problemen ohne bisherige Lösung, kann der Algorithmus somit nicht angewendet werden. Zudem ist bei diesem Algorithmus der Aufwand für die Implementierung nachteilig, sobald man kleinere bzw. einfache Modelle darstellen will.
+            Insgesamt lassen sich zwei Bedingungen für die sinnhafte Verwendung dieses Algorithmus festlegen. Zum einen sollte mindestens eine Lösung bekannt sein und zum anderen sollte der Grad an Komplexität nicht zu gering sein. Sobald diese Bedingungen zutreffen, kann der Algorithmus sehr hilfreich für die Lösung von Problemen und dabei auch noch sehr effizient sein.
+
+        \subsubsection{Gradientbasierte Perlin Noise}
+        Der Abschnitt beschäftigt sich mit dem Perlin Noise, welcher zu Beginn Allgemein erläutert wird. Anschließend wird auf die konkrete Implementierung von mir eingegangen, wobei unter anderem die unterschiedlichen Möglichkeiten zur Parametrisierung und daraus resultierend die verschiedenen Ergebnisse aufgezeigt werden. Darüber hinaus folgt eine Bewertung des Algorithmus hinsichtlich dessen Vorteile und Nachteile.
+            
+            \paragraph{Beschreibung des Algorithmus}$~$ \\
+            Der Perlin Noise ist ein Algorithmus, welcher eine Rauschfunktion implementiert dessen Grundlage zufällige Gradient-Werte sind [5]. Dabei entsteht oftmals ein zufälliges Erscheinungsbild, weshalb dieser Algorithmus oft zur Simulation von z.B. Landschaften eingesetzt wird.
+            Perlin Noise ist eine Rauschfunktion, welche ein bis drei Parameter akzeptiert und dementsprechend zufällige Werte zurückgibt [6]. Hier ist der Aufruf der Funktion-Noise(min, max) entscheidend Wird diese Funktion wird immer mit den gleichen Wert zum selben Zeitpunkt aufgerufen, dann liefert sie ebenfalls immer denselben Wert zurück. Deshalb sollte die Funktion mit einer Variablen hochgezählt werden, um die Werte variieren zu lassen.
+            Anschließend bildet jener Rückgabewert von der Funktion-Noise(min, max)  gemeinsam mit dem zuvor angegebenen Bereich (min,max)  und den neuen Bereich (new min, new max), die Eingabeparameter für die Funktion-Map(value, min, max, new min, new max). Zum Schluss es Algorithmus wird dann die Funktion zum Zeichen, wie z.B. rect() aufgerufen. 
+            Als Ergebnis des Perlin Noise wird eine meist wellenförmige Funktion, die aufgrund der Interpolation mit weichen Übergängen besitzt, gezeichnet. Dabei weisen die einzelnen Graphen ein ähnliches Muster auf.
+            
+            \paragraph{Beschreibung der Implementierung und Darstellung der Ergebnisse}$~$ \\
+            Dieser Abschnitt thematisiert nun meine explizite Implementierung des Algorithmus und zeigt verschiedene generierte Ergebnisse des Generators. Dafür werden im Folgenden zunächst die Parameter dargestellt:
+            
+            
+            \begin{itemize}
+\item Skalierung:	Bestimmt die Skalierung in Abhängigkeit mir Breite bzw. Höhe des Bildes.
+ \item Bewegung:	Bestimmt den Startpunkt auf der Y-Achse.
+ \item Beschleunigung:	Bestimmt die Änderung in Y-Richtung.
+ \item X-Wert:	Bereich in X-Richtung
+ \item Y-Wert:	Bereich in Y-Richtung.
+ \item Referenzwert: Wird für verschiedene Berechnungen, wie z.b. die Farbe verwendet.
+\end{itemize}
+
+            $~$ \\Die beschriebenen Parameter haben Einfluss auf das Ergebnis der Zeichnung. Zur weiteren Funktionsweise meiner Implementierung wird auf das Vorgehen aus der obigen Beschreibung aufgebaut. Dabei werden die Ausgaben aus der Funktion-Map() nicht direkt gezeichnet, sondern zunächst noch mithilfe der Funktion -Translate() verändert und anschließend noch mit der Funktion-Rotate() rotiert.Auch hier erfolgt die Koorperation respektive Abhängigkeit zu anderen Generatoren mithilfe des Seeders und der Random-Werte.
+            
+            $~$ \\Nun werden einige Ergebnisse meiner Implementierung präsentiert, wobei alle Ergebnissen die Default-Werte in der allgemeinen Konfiguration genommen wurden. Lediglich die Anzahl der Iterationen wurde auf 10 gesetzt.
+ 
+ Bildgenerierung:,,Menübar/Beispiele/GRissland/PerlinNoise/PerlinNoiseErgebnis1''\\  
+ \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"Perlin_default_iteration10.png"}
+\caption[Perlin Noise-Beispiel1]{1. Ergebnis (Skalierung = 20; Bewegung = 0,00; Beschleunigung = -0,05; x-Wert = 0,15; y-Wert = 0,15; Referenzwert = 255)}
+\end{figure} 
+ Bildgenerierung:,,Menübar/Beispiele/GRissland/PerlinNoise/PerlinNoiseErgebnis2''\\
+  \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"Perlin_Skalierung200.png"}
+\caption[Perlin Noise-Beispiel2]{2. Ergebnis (Skalierung = 200; Bewegung = 0,00; Beschleunigung = -0,05; x-Wert = 0,15; y-Wert = 0,15; Referenzwert = 255)}
+\end{figure}
+ Bildgenerierung:,,Menübar/Beispiele/GRissland/PerlinNoise/PerlinNoiseErgebnis1''\\
+   \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"Perlin_Skalierung100_xuy1.png"}
+\caption[Perlin Noise-Beispiel3]{3. (Skalierung = 100; Bewegung = 0,00; Beschleunigung = -0,05; x-Wert = 1; y-Wert = 1; Referenzwert = 255)}
+\end{figure}           
+           
+            \paragraph{Bewertung des Algorithmus}$~$ \\
+            Zum Abschluss der Thematisierung des Perlin Noise werden nun Vorteile und Nachteile aufgewiesen. Der Perlin Noise ist ein Algorithmus, welcher mit seinen weichen Übergängen ein Modell in einer realen Art und Weise darstellen kann. Die natürlichen Graphen helfen besonders bei Darstellung von z.B. Landschaften und weiteren natürlichen Sachverhalten. Zudem bieten die Zufälligkeit und die Vielfalt an möglicher Parametrisierung des Algorithmus den Vorteil, dass die Darstellung von nicht vorhersehbaren Modellen möglich ist.
+            Jenes stellt allerdings auch ein Nachteil dar, indem die Darstellung eines fixen und unnatürlichen Modells schwierig ist. Zudem benötigt dieser Algorithmus, aufgrund der vielen Berechnungen und zufälligen Werten, einen hohen Rechenaufwand und wirkt sich negativ auf die Performance aus. 
+            Zusammenfassend kann man den Perlin Noise, als einen hilfreichen Algorithmus bewerten. Dabei ist dieser geeignet, um mit einem mittelmäßigen Aufwand natürliche und zufällige Modelle darzustellen. Für die Darstellung von Modellen, welche jedoch eine fixe Struktur und Ergebnis aufweisen, ist der Perlin Noise nicht geeignet.
+            
+            \subsubsection{Galerie Koorperation}
+Zum Schluss der Vorstellung von meinen implementierten Generatoren, folgen nun drei weitere Ergebnisse.
+Diese Ergebnisse sind mithilfe verschiedener Koorperation von den zuvor vorgestellten Generatoren erzeugt. Auch hier kann das "Beispiele"-Menü im Konfigurator genutzt werden, um die Bilder zu reproduzieren.
+ Bildgenerierung:,,Menübar/Beispiele/GRissland/Koorperation/KoorperationErgebnis1''\\
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"kooperation_flocking_cautomate_Mode-uebereinander_50iterations.png"}
+\caption[Koorperation-Beispiel1]{1. Koorperation (Flocking und CAutomate)}
+\end{figure} 
+ Bildgenerierung:,,Menübar/Beispiele/GRissland/Koorperation/KoorperationErgebnis2''\\
+  \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"kooperation_perlinnoise_cautomate_Mode-2_1_iteration5.png"}
+\caption[Koorperation-Beispiel2]{2. Koorperation (Perlin Noise und CAutomate)}
+\end{figure}
+ Bildgenerierung:,,Menübar/Beispiele/GRissland/Koorperation/KoorperationErgebnis1''\\
+   \begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{"kooperation_perlinnoise_flocking_cautomate_Mode-2-2_iteration50.png"}
+\caption[Koorperation-Beispiel3]{3. Koorperation (Perlin Noise, Flocking und CAutomate)}
+\end{figure} 
+\newpage	
+
+\end{document}
+

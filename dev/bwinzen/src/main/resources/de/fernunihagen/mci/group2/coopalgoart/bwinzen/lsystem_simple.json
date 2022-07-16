@@ -1,0 +1,36 @@
+{
+  "name" : "Simple LSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : 16777037,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "10",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 150,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "colorMode" : "STATIC",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 5.0,
+      "iterationdelay" : 10.2880658436214,
+      "lsystem" : "Coding Train Beispiel",
+      "reverseMode" : false,
+      "rotation" : false,
+      "size" : 1.0,
+      "solidSize" : true,
+      "strokeColor" : -10157984,
+      "strokeWeight" : 2,
+      "treeCount" : 1.0
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

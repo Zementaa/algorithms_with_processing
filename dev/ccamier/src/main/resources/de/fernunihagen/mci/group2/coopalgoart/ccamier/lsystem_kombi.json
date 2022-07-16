@@ -1,0 +1,41 @@
+{
+  "name" : "Lsysteme-Kombi",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "SPLIT_SCREEN_2X1",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 8,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 15119181,
+      "ruleset" : "Sierpinksi",
+      "x" : 265.1452282157677,
+      "y" : 537.344398340249
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 15119308,
+      "ruleset" : "Veraestelung",
+      "x" : 802.9045643153527,
+      "y" : 553.941908713693
+    },
+    "yoffset" : 0,
+    "xoffset" : 500
+  } ]
+}

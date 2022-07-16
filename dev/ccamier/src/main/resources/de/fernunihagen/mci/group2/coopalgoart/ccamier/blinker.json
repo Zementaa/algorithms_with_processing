@@ -1,0 +1,26 @@
+{
+  "name" : "Blinker",
+  "renderer" : "FX2D",
+  "backgroundColor" : 16777215,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "10000",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_gol",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbe1" : 16750976,
+      "farbe2" : 8401741,
+      "verhaeltnis" : 100.91286307053942
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

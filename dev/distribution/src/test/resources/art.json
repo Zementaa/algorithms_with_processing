@@ -1,0 +1,17 @@
+{
+  "name" : "Simple Test",
+  "renderer" : "FX2D",
+  "width" : 1000,
+  "height" : 400,
+  "seed" : 0,
+  "delayBetweenIterations" : 1000,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 400,
+    "parameter" : null,
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

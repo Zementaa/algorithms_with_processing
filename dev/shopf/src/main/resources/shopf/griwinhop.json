@@ -1,0 +1,63 @@
+{
+  "name" : "GRissland::flocking;BWinzen::LSystem;SHopf::Swarm",
+  "renderer" : "P3D",
+  "backgroundColor" : 10060006,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_Flocking",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "closestDistance" : 100000,
+      "countFlocks" : 423
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "colorMode" : "GAUSS",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 7,
+      "iterationdelay" : 10,
+      "lsystem" : "Spiralen",
+      "reverseMode" : false,
+      "rotation" : false,
+      "size" : 1.0,
+      "solidSize" : true,
+      "strokeColor" : 1717145,
+      "strokeWeight" : 2,
+      "treeCount" : 5
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "boidsShape" : "Punkte",
+      "countBoids" : 711,
+      "obstacle" : false,
+      "obstacleDefense" : 28.497942386831276,
+      "quadTree" : false,
+      "separateView" : 25
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

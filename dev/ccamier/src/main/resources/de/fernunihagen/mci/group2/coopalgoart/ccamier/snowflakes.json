@@ -1,0 +1,27 @@
+{
+  "name" : "CCamier::LSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 5,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 13434828,
+      "ruleset" : "Fractal",
+      "x" : 555.6016597510373,
+      "y" : 557.2614107883817
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

@@ -1,0 +1,26 @@
+{
+  "name" : "Schneller Tod",
+  "renderer" : "FX2D",
+  "backgroundColor" : 16777215,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "1",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_gol",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbe1" : 65280,
+      "farbe2" : 255,
+      "verhaeltnis" : 120.0
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

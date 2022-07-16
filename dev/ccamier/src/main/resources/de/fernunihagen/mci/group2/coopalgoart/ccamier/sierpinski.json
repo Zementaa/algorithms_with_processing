@@ -1,0 +1,27 @@
+{
+  "name" : "Sierpinski",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "55",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 10,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 8428031,
+      "ruleset" : "Sierpinksi",
+      "x" : 492.5311203319502,
+      "y" : 472.61410788381744
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

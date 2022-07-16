@@ -1,0 +1,41 @@
+{
+  "name" : "6b2cc07e-2075-41e2-a99e-16c67b53a362",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "5",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 440,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "alignment" : 1.9753086419753085,
+      "boidsColor" : 1704040,
+      "boidsForm" : "LINE",
+      "cohesion" : 0.5102880658436214,
+      "colorMode" : "GAUSS",
+      "coopColorMode" : "WEAK",
+      "coopMode" : "COORDINATE_AVOIDANCE",
+      "countOfBoids" : 10000,
+      "forceNoColorTanks" : false,
+      "maxForce" : 1.0,
+      "maxSpeed" : 67.33333333333334,
+      "radiusAlignment" : 62.57407407407407,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 2.0123456790123457,
+      "size" : 14.672839506172838,
+      "solidSize" : false,
+      "staticSpeed" : true
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

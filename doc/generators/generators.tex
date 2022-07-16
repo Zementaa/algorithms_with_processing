@@ -1,0 +1,63 @@
+\documentclass[../mciAusarbeitung.tex]{subfiles}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{german}
+\usepackage{amssymb}
+
+\title{Fachpraktikum MCI (01513) - WS 2021/22}
+\author{Gruppe 2\\
+	Catherine Camier, Bastian Winzen}
+\date{\today}
+
+\begin{document}
+
+Jeder Kooperationspart enthält, wie schon in Abschnitt Architektur erwähnt, eine $Init$-Klasse. In dieser wird definiert, welche Algorithmen in der GUI zur Auswahl gestellt werden sollen. In der \textit{registerAlgorithms()} Methode werden die gewünschten Algorithmen registriert. Die für die Generatoren benötigten Parameter müssen beschrieben werden. Die nachfolgenden Parametertypen stehen dafür zur Verfügung:
+\begin{itemize}
+\setlength\itemsep{-0.5em}
+\item Enum (eine Selektion von verschieden Strings),
+\item String (ein Text),
+\item Color (ein rgb-Farbwert),
+\item Integer (ein Integer Wert),
+\item Float (ein Dezimal Wert),
+\item File (ein Dateipfad),
+\item Directory (ein Ordnerpfad),
+\item CheckBox (ein Boolcher Wert),
+\item RadioButton (eine Selektion von verschiedenen Optionen).
+\end{itemize}
+
+Jede \textit{ParameterDescription} enthält die Informationen:
+\begin{itemize}
+\setlength\itemsep{-0.5em}
+\item id (auf den Generator bezogen eindeutige ID),
+\item label (Sprechender Name für die Anzeige),
+\item mandatory (Konfiguration ist notwendig?),
+\item parameterType (der Type des Parameters),
+\item parameterRange (die Randbedingung/der Inhalt des Parameters).
+\end{itemize}
+
+Die Klasse \textit{ParameterDescription} enthält dabei für sämtliche Parametertypen statische Convenient-Methoden um die Instanziierung zu vereinfachen. 
+Ein Parameter der eine Farbe definiert, kann beispielsweise so erstellt werden:
+\newline
+\begin{itshape}
+\indent ParameterDescription.createColor(id, label, defaultColor);
+\end{itshape}\newline
+Die instanziierten \textit{ParameterDescription} werden in einer Liste gesammelt und dem Konstruktor der $ServiceDescription$ übergeben. Der Konstruktor Aufruf wird mit Generator Interface, einer ID, einem Label und einer Beschreibung vervollständigt. Die ID identifiziert den Generator eindeutig, das Label dient der Anzeige in der GUI, die Beschreibung wird als Tooltip angezeigt und soll einen Hinweis auf den Inhalt der Generator-Implementierung geben. \\
+Die $SimpleServiceFactory$ besteht aus der vorher erstellten $ServiceDescription$ und einem Lambda, das aus einer Parameter enthaltenden 'Map<String, Object>' eine Generatoren Instanz bildet. Die $SimpleServiceFactory$ implementiert das $ServiceFactory$ Interface und kann in der $ServiceRegistry$ registriert werden.\\
+Jeder Generator implementiert das $Generator$-Interface. \\
+\textit{
+\indent public interface Generator \{\\
+\indent	\indent void nextStep(CooperationContext context, PGraphics pg);\\
+\indent	\indent default boolean forceClearScreen() \{return false;\}\\
+\indent	\indent default boolean use3D() \{return false;\}\\
+\indent \}\\
+}
+Zwingend notwendig ist die Implementierung der $nextStep$ Methode. Sie bekommt als Parameter den Kooperationskontext und eine Zeichenfläche übergeben. In jedem Aufruf muss die Zeichenfläche bemalt werden. \\
+Für jeden Frame in der Animation werden alle Generatoren aufgerufen. Die resultierenden Einzelbilder werden anschließend zu einer Komposition zusammengefasst und angezeigt. Je nach Einstellung werden die gezeichneten Flächen übereinandergelegt oder neben- und untereinander platziert.
+Die Zeichenflächen sind am Anfang vollständig transparent. So können die erzeugten Bilder übereinander gelegt werden, wenn nicht das ganze Bild gefüllt wurde.
+
+
+\end{document}

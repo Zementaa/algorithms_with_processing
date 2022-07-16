@@ -1,0 +1,83 @@
+{
+  "name" : "Regenwald",
+  "renderer" : "P3D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "1",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 440,
+  "generatorConfigs" : [ {
+    "generatorId" : "contextTest",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "contextX" : 500,
+      "contextY" : 500
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "colorMode" : "GAUSS",
+      "coopMode" : "COORDINATE_AVOIDANCE",
+      "iteration" : 5,
+      "iterationdelay" : 7,
+      "lsystem" : "Coding Train Beispiel",
+      "reverseMode" : true,
+      "rotation" : false,
+      "size" : 1.0,
+      "solidSize" : true,
+      "strokeColor" : -10157984,
+      "strokeWeight" : 2,
+      "treeCount" : 5
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "contextTest",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "contextX" : 97,
+      "contextY" : 835
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_evolution3d",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "color" : 1704040,
+      "colorMode" : "RANDOM",
+      "coopMode" : "COORDINATE_ATTRACTION",
+      "coopModeTarget" : "ONLY_BY_SEED",
+      "count" : 30522,
+      "elementForm" : "CIRCLE",
+      "elementSpeed" : 10.803292181069958,
+      "imagePath" : "pics\\parrot.jpg",
+      "mode" : "rgb",
+      "perlinoiseItStep" : 0.01,
+      "shoterEvolution" : true,
+      "size" : 3.1333333333333333,
+      "solidSize" : true
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

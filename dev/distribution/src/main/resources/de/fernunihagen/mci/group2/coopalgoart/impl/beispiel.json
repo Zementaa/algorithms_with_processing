@@ -1,0 +1,74 @@
+{
+  "name" : "6b2cc07e-2075-41e2-a99e-16c67b53a362",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 440,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 15,
+      "yStartpoint" : 0
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "colorMode" : "RANDOM",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 4,
+      "iterationdelay" : 10,
+      "lsystem" : "Coding Train Beispiel",
+      "reverseMode" : true,
+      "rotation" : false,
+      "size" : 1.0,
+      "solidSize" : true,
+      "strokeColor" : 16777037,
+      "strokeWeight" : 2,
+      "treeCount" : 6
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : 16711680,
+      "boidsForm" : "CIRCLE",
+      "cohesion" : 0.5,
+      "colorMode" : "STATIC",
+      "coopColorMode" : "STRONG",
+      "coopMode" : "ONLY_BY_SEED",
+      "countOfBoids" : 10000,
+      "maxForce" : 1.0,
+      "maxSpeed" : 13.275720164609053,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 1.0,
+      "size" : 8.975308641975309,
+      "solidSize" : true,
+      "staticSpeed" : true
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

@@ -1,0 +1,54 @@
+{
+  "name" : "a2684c0f-4c51-419d-b298-5fc5e66976c9",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 502,
+  "height" : 502,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "SPLIT_SCREEN_2X2",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 50,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_PerlineNoise",
+    "generatorVersion" : 0,
+    "width" : 251,
+    "height" : 251,
+    "clearScreen" : false,
+    "parameter" : {
+      "fly" : 0.0,
+      "increaseFly" : -0.05,
+      "scl" : 20,
+      "strokeValue" : 255,
+      "xOff" : 0.15,
+      "yOff" : 0.15
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "grissland_Flocking",
+    "generatorVersion" : 0,
+    "width" : 251,
+    "height" : 251,
+    "clearScreen" : false,
+    "parameter" : {
+      "closestDistance" : 100000,
+      "countFlocks" : 200
+    },
+    "xoffset" : 251,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 251,
+    "height" : 251,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 15,
+      "yStartpoint" : 0
+    },
+    "xoffset" : 0,
+    "yoffset" : 251
+  } ]
+}

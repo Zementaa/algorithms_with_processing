@@ -1,0 +1,76 @@
+.root {
+     -fx-background-color: darkgray;
+}
+
+.alert {
+     -fx-background-color: darkgray;
+}
+.menu-bar{
+	 -fx-background-color: darkgray;
+}
+
+.label {
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #101010;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,0.5) , 0.0,0.0,0.0,1.0 );
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
+}
+
+.titled-pane {
+	/*-fx-skin: "com.sun.javafx.scene.control.skin.TitledPaneSkin";*/    
+	-fx-text-fill: -fx-text-base-color;
+	-fx-font-weight: bold;
+}
+
+.titled-pane:focused {
+	-fx-text-fill: white;
+}
+
+.titled-pane > .title {
+	-fx-background-insets: 0.0, 1.0, 2.0;
+	-fx-background-radius: 5.0 5.0 0.0 0.0, 4.0 4.0 0.0 0.0, 3.0 3.0 0.0 0.0;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
+    -fx-text-fill: white;
+	/*-fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+	-fx-font-size: 14.0px;
+}
+
+.titled-pane:focused > .title {
+	-fx-color: -fx-focus-color;
+}
+
+
+.titled-pane > *.content {
+	-fx-background-color: linear-gradient(#a1e2f1, #6A9098);
+	-fx-background-insets: 0.0, 0.0 1.0 1.0 1.0;
+	-fx-padding: 0.167em;
+ }
+
+.titled-pane:focused > .title > .arrow-button .arrow {
+	-fx-background-color: white;
+}
+
+.dialog-pane {
+   -fx-background-color: black;
+   -fx-padding: 0;
+}
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+   -fx-background-color: yellow;
+   -fx-text-fill:black;
+   -fx-font-size:15.0px;
+}
+
+.combo-box.center-aligned>.list-cell {
+    -fx-alignment: center;
+}

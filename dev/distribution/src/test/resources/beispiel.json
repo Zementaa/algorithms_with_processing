@@ -1,0 +1,54 @@
+{
+  "name" : "",
+  "renderer" : "JAVA2D",
+  "backgroundColor" : 6784,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "seed" : 0,
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "iteration" : 15.0,
+      "iterationdelay" : 214.2857142857143,
+      "lsystem" : "Geordnetes Chaos",
+      "size" : 6.735714285714287
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsStartX" : 300,
+      "cordsStartY" : 500,
+      "lifespan" : 150,
+      "numCords" : 100,
+      "targetStartX" : 600,
+      "targetStartY" : 500
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "grissland_Flocking",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "closestDistance" : 100000,
+      "countFlocks" : 200
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

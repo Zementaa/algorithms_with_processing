@@ -1,0 +1,86 @@
+{
+  "name" : "GRissland::Cautomate;CCamier::GOL;SHopf::LSystem;BWinzen::Swarm",
+  "renderer" : "FX2D",
+  "backgroundColor" : 16764134,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 180,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 40,
+      "yStartpoint" : 0
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "ccamier_gol",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "farbe1" : 16711907,
+      "farbe2" : 255,
+      "verhaeltnis" : 80
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 10,
+      "startRotation" : 0.168068747461578,
+      "startX" : 500,
+      "startY" : 1000,
+      "treeColor" : 13408716,
+      "treeShape" : "geneigt, kleine Zweige"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : 5059481,
+      "boidsForm" : "RANDOM",
+      "cohesion" : 0.5,
+      "colorMode" : "GAUSS",
+      "colorTransition" : false,
+      "coopColorMode" : "NO",
+      "coopMode" : "COORDINATE_ATTRACTION",
+      "countOfBoids" : 634,
+      "edgeBehavior" : "HIDDEN_FORCE",
+      "fading" : 0,
+      "forceNoColorTanks" : false,
+      "maxForce" : 1.0,
+      "maxSpeed" : 4.0,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 1.0,
+      "size" : 20.296296296296298,
+      "solidSize" : true,
+      "staticSpeed" : true
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

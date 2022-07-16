@@ -1,0 +1,36 @@
+{
+  "name" : "Papagei",
+  "renderer" : "P3D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "3",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 500,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_evolution3d",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "color" : 3349120,
+      "colorMode" : "GAUSS",
+      "coopMode" : "ONLY_BY_SEED",
+      "coopModeTarget" : "ONLY_BY_SEED",
+      "count" : 36894,
+      "elementForm" : "TRIANGLE",
+      "elementSpeed" : 14.985185185185184,
+      "imagePath" : "pics/parrot.jpg",
+      "mode" : "b",
+      "perlinoiseItStep" : 0.01,
+      "shoterEvolution" : false,
+      "size" : 1.7074074074074075,
+      "solidSize" : false
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

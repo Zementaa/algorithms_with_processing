@@ -1,0 +1,27 @@
+{
+  "name" : "CCamier::PSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : 13434879,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "2000",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 10,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_psystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "filePath1" : "E:\\Eigene Dateien\\Eclipse\\workspace\\gruppe2\\dev\\distribution\\pics\\halftone.png",
+      "filePath2" : "E:\\Eigene Dateien\\Eclipse\\workspace\\gruppe2\\dev\\distribution\\pics\\halftone.png",
+      "filePath3" : "E:\\Eigene Dateien\\Eclipse\\workspace\\gruppe2\\dev\\distribution\\pics\\halftone.png",
+      "filePath4" : "E:\\Eigene Dateien\\Eclipse\\workspace\\gruppe2\\dev\\distribution\\pics\\halftone.png"
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

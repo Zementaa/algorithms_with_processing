@@ -1,0 +1,69 @@
+{
+  "name" : "BWinzen::Swarm;SHopf::Evolution;GRissland::Cautomate",
+  "renderer" : "JAVA2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : 16711913,
+      "boidsForm" : "CIRCLE",
+      "cohesion" : 0.5,
+      "colorMode" : "GAUSS",
+      "colorTransition" : false,
+      "coopColorMode" : "NO",
+      "coopMode" : "COORDINATE_AVOIDANCE",
+      "countOfBoids" : 1004,
+      "edgeBehavior" : "ENDLESS_SCREEN",
+      "forceNoColorTanks" : false,
+      "maxForce" : 1.0,
+      "maxSpeed" : 4.0,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 20.364197530864185,
+      "seperation" : 1.9958847736625516,
+      "size" : 8.481481481481481,
+      "solidSize" : true,
+      "staticSpeed" : false
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsStartX" : 178,
+      "cordsStartY" : 168,
+      "lifespan" : 281,
+      "numCords" : 59
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "grissland_Cautomate",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "dimBlocks" : 30,
+      "yStartpoint" : 0
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

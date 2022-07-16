@@ -1,0 +1,27 @@
+{
+  "name" : "Gespiegelter Baum",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "1",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 6,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 15112627,
+      "ruleset" : "default",
+      "x" : 510.78838174273864,
+      "y" : 519.0871369294607
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

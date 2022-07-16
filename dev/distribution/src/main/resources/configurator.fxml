@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.fernunihagen.mci.group2.coopalgoart.impl.ConfiguratorController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Datei">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#open" text="Öffnen" />
+                  <MenuItem mnemonicParsing="false" onAction="#openMostRecent" text="Öffne letzte Konfiguration" />
+                  <Menu fx:id="mostRecentMenu" mnemonicParsing="false" text="Letzte" />
+                  <MenuItem mnemonicParsing="false" onAction="#resetUI" text="Reset" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#save" text="Speichern" />
+            <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Speichern unter" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#quit" text="Schließen" />
+          </items>
+        </Menu>
+            <Menu fx:id="exampleMenu" mnemonicParsing="false" text="Beispiele" />
+        <Menu mnemonicParsing="false" text="Hilfe">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#showKeyControls" text="Steuerung" />
+            <MenuItem mnemonicParsing="false" onAction="#showAbout" text="Info" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ScrollPane fx:id="scrollPane" prefHeight="345.0" prefWidth="640.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <VBox>
+                     <children>
+                        <VBox fx:id="configurationVBox" prefWidth="800.0">
+                           <children>
+                            <TitledPane fx:id="animationConfigurationPanel" animated="false" text="Allgemeine Konfiguration" VBox.vgrow="ALWAYS">
+                              <content>
+                                <AnchorPane prefHeight="294.0" prefWidth="798.0">
+                                       <children>
+                                          <GridPane layoutX="18.6" layoutY="19.6" prefHeight="150.0" prefWidth="779.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="472.0" minWidth="0.0" prefWidth="172.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="653.0000305175781" minWidth="0.0" prefWidth="629.0000305175781" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="647.0" minWidth="10.0" prefWidth="148.99996948242188" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Breite:" GridPane.rowIndex="1" />
+                                                <Label text="Höhe:" GridPane.rowIndex="2" />
+                                                <Slider fx:id="widthInput" majorTickUnit="500.0" max="4000.0" min="500.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" value="1000.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Slider fx:id="heightInput" majorTickUnit="500.0" max="4000.0" min="500.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" value="1000.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label text="Name:" />
+                                                <TextField fx:id="nameInput" GridPane.columnIndex="1" />
+                                                <Label text="Koopmode:" GridPane.rowIndex="3" />
+                                                <ChoiceBox fx:id="coopModeChoice" minWidth="570.0" prefHeight="25.0" prefWidth="570.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                                                <Label text="Hintergrundfarbe:" GridPane.rowIndex="4" />
+                                                <ColorPicker fx:id="backgroundColorChoice" minWidth="570.0" prefHeight="25.0" prefWidth="570.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label text="Seed:" GridPane.rowIndex="5" />
+                                                <TextField fx:id="seedTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label text="FPS:" GridPane.rowIndex="6" />
+                                                <Slider fx:id="fpsSlider" max="60.0" min="0.01" prefHeight="33.0" prefWidth="504.0" showTickLabels="true" value="60.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <Label fx:id="fpsLabel" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                <Label text="Renderer:" GridPane.rowIndex="7" />
+                                                <ChoiceBox fx:id="rendererChoice" prefHeight="25.0" prefWidth="570.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <Label text="Anzahl Iterationen:" GridPane.rowIndex="8" />
+                                                <Spinner fx:id="maxFrameCountSpinner" editable="true" prefHeight="25.0" prefWidth="571.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                <Button mnemonicParsing="false" onAction="#configureFullScreen" text="Vollbild" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="TOP" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                           </children>
+                        </VBox>
+                        <HBox prefWidth="800.0">
+                           <children>
+                              <ChoiceBox fx:id="generatorChoice" prefWidth="150.0" />
+                              <Button mnemonicParsing="false" onAction="#addGenerator" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="TOP_CENTER" layoutY="748.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#testConfiguration" prefHeight="25.0" prefWidth="317.0" text="Testlauf" />
+                  <Button mnemonicParsing="false" onAction="#recordConfiguration" prefHeight="25.0" prefWidth="284.0" text="Aufzeichnung">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

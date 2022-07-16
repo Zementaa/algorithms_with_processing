@@ -1,0 +1,29 @@
+{
+  "name" : "SHopf::Evolution",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 2100,
+  "generatorConfigs" : [ {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsStartX" : 300,
+      "cordsStartY" : 500,
+      "hitPara" : 32,
+      "lifespan" : 150,
+      "numCords" : 100
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

@@ -1,0 +1,62 @@
+{
+  "name" : "Farbenexplosion",
+  "renderer" : "FX2D",
+  "backgroundColor" : -16777216,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "5",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 440,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "alignment" : 1.9753086419753085,
+      "boidsColor" : 1704040,
+      "boidsForm" : "LINE",
+      "cohesion" : 0.5102880658436214,
+      "colorMode" : "GAUSS",
+      "colorTransition" : false,
+      "coopColorMode" : "STRONG",
+      "coopMode" : "COORDINATE_AVOIDANCE",
+      "countOfBoids" : 6420,
+      "edgeBehavior" : "HIDDEN_FORCE",
+      "fading" : 50,
+      "forceNoColorTanks" : false,
+      "maxForce" : 1.0,
+      "maxSpeed" : 29.4238683127572,
+      "radiusAlignment" : 62.57407407407407,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 2.0123456790123457,
+      "size" : 7.925925925925926,
+      "solidSize" : false,
+      "staticSpeed" : true
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 500,
+      "startY" : 796,
+      "treeColor" : -39322,
+      "treeShape" : "gerade, kleine Zweige",
+      "zweigFarbe" : 3368499
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

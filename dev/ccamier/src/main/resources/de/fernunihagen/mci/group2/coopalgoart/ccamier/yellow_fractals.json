@@ -1,0 +1,27 @@
+{
+  "name" : "Yellow Fractals",
+  "renderer" : "FX2D",
+  "backgroundColor" : 0,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : "100",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 6,
+  "generatorConfigs" : [ {
+    "generatorId" : "ccamier_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "farbeZweige" : 16777037,
+      "ruleset" : "Fractal",
+      "x" : 492.5311203319502,
+      "y" : 472.61410788381744
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}

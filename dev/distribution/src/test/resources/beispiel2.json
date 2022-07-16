@@ -1,0 +1,69 @@
+{
+  "name" : "e457a15c-28c4-4fcb-ac90-a5ac5eced73d",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : 0,
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "bwinzen_swarm",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "alignment" : 2.0,
+      "boidsColor" : 15132237,
+      "boidsForm" : "ellipses",
+      "cohesion" : 0.5,
+      "colorMode" : "GAUSS",
+      "coopColorMode" : false,
+      "coopMode" : "ONLY_BY_SEED",
+      "countOfBoids" : 10000.0,
+      "maxForce" : 1.0,
+      "radiusAlignment" : 50.0,
+      "radiusCohesion" : 50.0,
+      "radiusSeperation" : 100.0,
+      "seperation" : 1.0,
+      "solidSize" : true
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "iteration" : 15.904761904761905,
+      "iterationdelay" : 0,
+      "lsystem" : "Spiralen",
+      "size" : 6.185714285714286,
+      "strokeColor" : 3362227,
+      "strokeWeight" : 2
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsStartX" : 300,
+      "cordsStartY" : 500,
+      "lifespan" : 500.0,
+      "numCords" : 326.1904761904762,
+      "targetStartX" : 600,
+      "targetStartY" : 500
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

@@ -1,0 +1,62 @@
+{
+  "name" : "SHopf::LSystem;SHopf::Evolution;SHopf::LSystem",
+  "renderer" : "FX2D",
+  "backgroundColor" : -13057,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 401,
+  "generatorConfigs" : [ {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 10,
+      "startRotation" : 0.0,
+      "startX" : 298,
+      "startY" : 709,
+      "treeColor" : 10046822,
+      "treeShape" : "gerade, wenig Zweige"
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsConnect" : false,
+      "cordsStartX" : 807,
+      "cordsStartY" : 855,
+      "hitPara" : 32,
+      "lifespan" : 401,
+      "numCords" : 100
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  }, {
+    "generatorId" : "shopf_lsystem",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "numberOfTree" : 1,
+      "startRotation" : 0.0,
+      "startX" : 500,
+      "startY" : 1000,
+      "treeColor" : 1704040,
+      "treeShape" : "geneigt, grÃ¶ÃŸere Zweige"
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

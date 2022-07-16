@@ -1,0 +1,25 @@
+{
+  "name" : "6be549ad-3c87-4966-8d2c-c7364f99bc95",
+  "renderer" : "P3D",
+  "backgroundColor" : 11119017,
+  "width" : 500,
+  "height" : 500,
+  "fps" : 60.0,
+  "coopMode" : "OVERLAYER",
+  "seed" : 0,
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : 500,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_Flocking",
+    "generatorVersion" : 0,
+    "width" : 500,
+    "height" : 500,
+    "clearScreen" : false,
+    "parameter" : {
+      "closestDistance" : 100000,
+      "countFlocks" : 200
+    },
+    "yoffset" : 0,
+    "xoffset" : 0
+  } ]
+}

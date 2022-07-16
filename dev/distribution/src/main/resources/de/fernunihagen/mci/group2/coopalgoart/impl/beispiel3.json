@@ -1,0 +1,74 @@
+{
+  "name" : "Coop2",
+  "renderer" : "FX2D",
+  "backgroundColor" : 6784,
+  "width" : 1000,
+  "height" : 1000,
+  "fps" : 60.0,
+  "recordMode" : false,
+  "coopMode" : "OVERLAYER",
+  "seed" : "0",
+  "delayBetweenIterations" : -1,
+  "numberOfFrames" : -1,
+  "generatorConfigs" : [ {
+    "generatorId" : "grissland_PerlineNoise",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "fly" : 0.0,
+      "increaseFly" : -0.05,
+      "scl" : 200,
+      "strokeValue" : 255,
+      "xOff" : 0.15,
+      "yOff" : 0.15
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "bwinzen_lystembuilder",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : true,
+    "parameter" : {
+      "angle" : 45.0,
+      "axiom" : "[X][-X][+X][--X][++X][---X][+++X][++++X]",
+      "colorMode" : "GAUSS",
+      "coopMode" : "ONLY_BY_SEED",
+      "iteration" : 6,
+      "iterationdelay" : 10,
+      "offsetX" : 0,
+      "offsetY" : 0,
+      "reverseMode" : true,
+      "rotation" : false,
+      "rule0" : "X=F[-X][+X]FFX",
+      "rule1" : "F=FF",
+      "rule2" : "",
+      "rule3" : "",
+      "rule4" : "",
+      "size" : 0.3648148148148148,
+      "solidSize" : true,
+      "strokeColor" : 16777088,
+      "strokeWeight" : 2,
+      "treeCount" : 1
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  }, {
+    "generatorId" : "shopf_evolution",
+    "generatorVersion" : 0,
+    "width" : 1000,
+    "height" : 1000,
+    "clearScreen" : false,
+    "parameter" : {
+      "cordsStartX" : 0,
+      "cordsStartY" : 0,
+      "lifespan" : 500,
+      "numCords" : 500
+    },
+    "xoffset" : 0,
+    "yoffset" : 0
+  } ]
+}
